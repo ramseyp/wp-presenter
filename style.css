@@ -81,18 +81,29 @@ a:focus, a:hover, a:active {
 
 /* @group Homepage ********************/
 
+.home .entry-title {
+	font-size: 2em;
+	}
 .home .intro {
 	width: 80%;
-	max-width: 400px;
+	max-width: 800px;
 	margin: 0 auto;
+	font-size: 1.35em;
+	line-height: 1.2em;
 	}
 
-.home .intro ul li {
+.home .intro ul {
+	margin: 1em 0;
+	padding-left: 0.5em;
+	}
+.home .intro li {
 	list-style-type: none;
-	font-size: 2em;
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 	}
 
+.homepage {
+	
+}
 
 /* @end */
 

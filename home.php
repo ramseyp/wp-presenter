@@ -5,17 +5,23 @@
 					<h1 class="entry-title"><?php bloginfo( 'name' ); ?></h1>
 				</header> <!-- end article header -->
 				<section class="post_content clearfix">
-					<div class="intro">
-						<h2><?php _e('Select from a Presentation below.','presenter'); ?></h2>
-						<ul>
-					<?php 
+					<div class="intro"><?php 
+					if ( is_active_sidebar( 'homepage' ) ) {
+						echo '<div class="homepage">';
+							dynamic_sidebar( 'homepage' );
+						echo '</div><!-- end .homepage -->';
+					} else {
+						echo '<section class="post_content clearfix">';
+						echo '<h2 class="intro">'. _e('Select from a Presentation below.', 'presenter') .'</h2>';
+					}
 					$args = array(
 						'orderby' => 'name',
 						'show_count' => 1,
 						'title_li' => '',
 						'hierarchical' => false
-					);
-					wp_list_categories( $args ); ?>
+					); ?>
+					<ul>
+					<?php wp_list_categories( $args ); ?>
 					</ul></div>
 
 				</section> <!-- end article section -->

@@ -22,6 +22,11 @@ function s25_presenter_setup() {
 
 	// Setup new sidebars for the footer
 	register_sidebar( array(
+		'id'			=> 'homepage',
+		'name'			=> __( 'Homepage', 'genesis' ),
+		'description'	=> __( '' ),
+	) );
+	register_sidebar( array(
 		'id'			=> 'footer-widget1',
 		'name'			=> __( 'Footer Widget first', 'presenter' ),
 		'description'	=> __( '' ),
